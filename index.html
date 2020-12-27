@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+  <title>Website Using Bootstrap</title>
+<style>
+  .carousel{
+    padding-top: 56px;
+  }
+</style>
+  
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">TechMarket</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Topics
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Engineering</a></li>
+              <li><a class="dropdown-item" href="#">Technology</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Write Us</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+        <div class="mx-4">
+          <!-- login button -->
+          <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+            data-bs-target="#loginModal">Login</button>
+
+          <!-- SignUp Button -->
+          <button type="button" class="btn btn-danger mx-1" data-bs-toggle="modal"
+            data-bs-target="#signupModal">SignUp</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Due to Covid-19</strong> the website is temporarily closed.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+ -->
+
+
+  <!-- singup modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signupModalLabel">Register</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail2" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword2">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Register Now</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- carousel starts -->
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="q3.jpg" class="d-block w-100" alt="image1">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Welcome to TechMarket</h5>
+          <p>Come here and shop here with awesome discounts</p>
+          <button type="button" class="btn btn-primary btn-sm mx-1 active">Laptops</button>
+          <button type="button" class="btn btn-danger btn-sm mx-1">Smartphones</button>
+          <button type="button" class="btn btn-warning btn-sm mx-1">Tablets</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="q2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>All kinds of brands available</h5>
+          <p>We sell the most cheap and good quality products</p>
+          <button type="button" class="btn btn-primary btn-sm mx-1">Laptops</button>
+          <button type="button" class="btn btn-danger btn-sm mx-1 active">Smartphones</button>
+          <button type="button" class="btn btn-warning btn-sm mx-1">Tablets</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="asli2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Best smartphone seller </h5>
+          <p>We have the best selling products of the global market</p>
+          <button type="button" class="btn btn-primary btn-sm mx-1">Laptops</button>
+          <button type="button" class="btn btn-danger btn-sm mx-1">Smartphones</button>
+          <button type="button" class="btn btn-warning btn-sm mx-1 active">Tablets</button>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </a>
+  </div>
+
+
+  <!-- card starts -->
+  <div class="container">
+    <div class="row mb-2 my-4">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">Laptops</strong>
+            <h3 class="mb-0">HP smart laptop</h3>
+            <div class="mb-1 text-muted">Nov 12</div>
+            <p class="card-text mb-auto">Best laptop with less cost and more services</p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img style="width: 200px;height: 250px;" class="bd-placeholder-img" src="as4.jpg" alt="">
+
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-danger">Smartphones</strong>
+            <h3 class="mb-0">Redmi note 5 pro</h3>
+            <div class="mb-1 text-muted">Nov 11</div>
+            <p class="mb-auto">This is the best smartphone in all variants of 3gb, 4gb & 6Gb</p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img style="width: 200px;height: 250px;" class="bd-placeholder-img" src="red1.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-warning">Smartphones</strong>
+            <h3 class="mb-0">Huawei pro edge</h3>
+            <div class="mb-1 text-muted">Nov 9</div>
+            <p class="mb-auto">We have the best smartphone in all variants of 3gb, 4gb & 6Gb</p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img style="width: 200px;height: 250px;" class="bd-placeholder-img" src="as3.jpg" alt="">
+
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success">Tablets</strong>
+            <h3 class="mb-0">Apple macbook pro tablet</h3>
+            <div class="mb-1 text-muted">Nov 2</div>
+            <p class="card-text mb-auto">Best quality with less cost and more services</p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img style="width: 200px;height: 250px;" class="bd-placeholder-img" src="as1.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
